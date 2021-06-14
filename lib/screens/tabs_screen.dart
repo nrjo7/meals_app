@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/widgets/main_drawer.dart';
 import '/screens/favorite_screen.dart';
 import '/screens/category_screen.dart';
 
@@ -12,7 +13,9 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
         length: 2,
+        //initialIndex: 0,
         child: Scaffold(
+          drawer: MainDrawer(),
           appBar: AppBar(
             title: Text('Meals'),
             bottom: TabBar(tabs: <Widget>[
